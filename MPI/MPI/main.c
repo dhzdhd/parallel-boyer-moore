@@ -100,7 +100,5 @@ int main(int argc, char** argv) {
         printf("Time taken: %g\n", end - start);
     }
    
-
-
     return 0;
 }
