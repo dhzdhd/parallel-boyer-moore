@@ -21,6 +21,7 @@ void boyerMoore(const char *text, int textLength, const char *pattern, int patte
 {
     int badCharacterShift[ALPHABET_SIZE];
     precomputeBadCharacterShift(pattern, patternLength, badCharacterShift);
+    omp_set_num_threads(textLength);
 #pragma omp parallel for
     for (int skip = 0; skip <= textLength - patternLength; skip++)
     {
